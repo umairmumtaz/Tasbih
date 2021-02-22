@@ -16,25 +16,20 @@ struct ContentView: View {
         
            VStack{
 
-                Text("\(count)")
-                .padding()
-               Spacer()
-                
-            Button(action: {
+            Text("Count: " + "\(count)")
+                    .padding()
+                Button(action: {
                 self.count = count + 1
                 
             }) {
-                //no content whole screen
-                
-             //   Image("").ignoresSafeArea()
+      
+    
                 Text("Click anywhere on the Screen!")
-                .padding()
+                    .frame(maxWidth: .infinity,maxHeight: .infinity)
+                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             }
+        
             
-            
-        
-        
-        
            }
         
     }
